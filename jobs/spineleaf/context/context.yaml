@@ -1,0 +1,7 @@
+---
+spine_1_mgmt: "{{ site_prefix | network_offset('0.0.0.41/32') }}"
+spine_2_mgmt: "{{ site_prefix | network_offset('0.0.0.42/32') }}"
+leaf_1_mgmt: "{{ site_prefix | network_offset('0.0.0.51/32') }}"
+leaf_2_mgmt: "{{ site_prefix | network_offset('0.0.0.52/32') }}"
+leaf_3_mgmt: "{{ site_prefix | network_offset('0.0.0.53/32') }}"
+leaf_4_mgmt: "{{ site_prefix | network_offset('0.0.0.54/32') }}"

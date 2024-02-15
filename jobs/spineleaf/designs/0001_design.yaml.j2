@@ -23,9 +23,9 @@ locations:
 {% endmacro %}
 
 devices:
-  {{ device("ceos-spine1", "spine", "172.18.0.33/24") }}
-  {{ device("ceos-spine2", "spine", "172.18.0.34/24") }}
-  {{ device("ceos-leaf1", "leaf", "172.18.0.35/24") }}
-  {{ device("ceos-leaf2", "leaf", "172.18.0.36/24") }}
-  {{ device("ceos-leaf3", "leaf", "172.18.0.37/24") }}
-  {{ device("ceos-leaf4", "leaf", "172.18.0.38/24") }}
+  {{ device("ceos-spine1", "spine", spine_1_mgmt) }}
+  {{ device("ceos-spine2", "spine", spine_2_mgmt) }}
+  {{ device("ceos-leaf1", "leaf", leaf_1_mgmt) }}
+  {{ device("ceos-leaf2", "leaf", leaf_2_mgmt) }}
+  {{ device("ceos-leaf3", "leaf", leaf_3_mgmt) }}
+  {{ device("ceos-leaf4", "leaf", leaf_4_mgmt) }}

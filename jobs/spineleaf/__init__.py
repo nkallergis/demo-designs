@@ -19,6 +19,8 @@ class SpineLeafDesign(DesignJob):
 
     site_name = StringVar(regex=r"\w{3}\d+")
 
+    site_prefix = IPNetworkVar(min_prefix_length=16, max_prefix_length=24)
+
     class Meta:
         """Metadata needed to implement the backbone site design."""
 
