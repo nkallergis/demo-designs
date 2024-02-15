@@ -22,7 +22,7 @@ class SpineLeafDesign(DesignJob):
     class Meta:
         """Metadata needed to implement the backbone site design."""
 
-        name = "Initial Data"
+        name = "Spine-Leaf Design"
         commit_default = False
         design_file = "designs/0001_design.yaml.j2"
         context_class = SpineLeafDesignContext
