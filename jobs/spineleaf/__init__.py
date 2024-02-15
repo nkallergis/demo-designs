@@ -2,6 +2,7 @@
 from nautobot.apps.jobs import register_jobs
 
 from nautobot_design_builder.design_job import DesignJob
+from nautobot.extras.jobs import ObjectVar, StringVar, IPNetworkVar
 
 from .context import SpineLeafDesignContext
 
