@@ -1,0 +1,31 @@
+---
+locations:
+  - name: "{{ site_name }}"
+    parent__name: "{{ region.name }}"
+    location_type__name: "Site"
+    status__name: "Active"
+    "!ref": "site"
+
+{% macro device(device_name, role_name, mgmt_address) -%}
+  - name: "{{ device_name }}"
+    location: "!ref:site"
+    device_type__model: "PTX10016"
+    role__name: role_name
+    status__name: "Active"
+    interfaces:
+      - name: "Management0"
+        status__name: "Active"
+        type: "virtual"
+        ip_address_assignments:
+          - ip_address:
+              "!create_or_update:address": "{{ mgmt_address }}"
+              status__name: "Active"
+{% endmacro %}
+
+devices:
+  {{ device("ceos-spine1", "spine", "172.18.0.33/24") }}
+  {{ device("ceos-spine2", "spine", "172.18.0.34/24") }}
+  {{ device("ceos-leaf1", "leaf", "172.18.0.35/24") }}
+  {{ device("ceos-leaf2", "leaf", "172.18.0.36/24") }}
+  {{ device("ceos-leaf3", "leaf", "172.18.0.37/24") }}
+  {{ device("ceos-leaf4", "leaf", "172.18.0.38/24") }}
