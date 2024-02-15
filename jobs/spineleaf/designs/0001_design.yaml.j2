@@ -10,7 +10,7 @@ locations:
   - name: "{{ device_name }}"
     location: "!ref:site"
     device_type__model: "PTX10016"
-    role__name: role_name
+    role__name: "{{ role_name }}"
     status__name: "Active"
     interfaces:
       - name: "Management0"
